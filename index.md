@@ -7,7 +7,7 @@ description: "Junyu JIANG's personal website. 这是蒋竣羽的个人网站"
 <section class="home-container">
     <div class="home-header">
         <div class="profile-container">
-            <img src="/assets/images/myblog.jpg" alt="蒋竣羽的照片" title="Photo Credit: Sihan JIANG" class="profile-image">
+            <img src="{{ '/assets/images/myblog.jpg' | relative_url }}" alt="蒋竣羽的照片" title="Photo Credit: Sihan JIANG" class="profile-image">
         </div>
         
         <div class="profile-info">
