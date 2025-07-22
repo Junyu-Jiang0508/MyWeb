@@ -3,7 +3,7 @@ description: This is Junyu JIANG's personal website 这是蒋竣羽的个人网�
 author: Junyu JIANG
 email: juj013@ucsd.edu
 url: "https://junyu-jiang0508.github.io" 
-baseurl: ""
+baseurl: "/MyWeb"
 
 permalink: /blog/:year/:month/:title/
 
