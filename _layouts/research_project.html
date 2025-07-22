@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<section class="research-project">
+    <article>
+        <h1 class="project-title">{{ page.title }}</h1>
+        
+        <div class="project-meta">
+            {% if page.authors %}
+            <div class="authors">
+                <span class="meta-label">Authors:</span>
+                {% for author in page.authors %}
+                <span class="author">{{ author }}</span>
+                {% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            {% if page.date %}
+            <div class="date">
+                <span class="meta-label">Date:</span>
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%B %Y" }}
+                </time>
+            </div>
+            {% endif %}
+            
+            <!-- {% if page.status %}
+            <div class="status">
+                <span class="meta-label">Status:</span>
+                {{ page.status }}
+            </div>
+            {% endif %} -->
+        </div>
+        
+        <!-- {% if page.description %}
+        <div class="project-description">
+            <h2>Overview</h2>
+            <p>{{ page.description }}</p>
+        </div>
+        {% endif %} -->
+        
+        <div class="project-abstract">
+            {{ content }}
+        </div>
+        
+        <!-- {% if page.links %}
+        <div class="project-resources">
+            <h2>Resources</h2>
+            <div class="resource-links">
+                {% for link in page.links %}
+                <a href="{{ link.url | relative_url }}" target="_blank" class="resource-link">
+                    {{ link.text }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %} -->
+        
+        <div class="project-navigation">
+            <a href="{{ '/research' | relative_url }}" class="back-link">
+                <i class="icon">←</i> All Research Projects
+            </a>
+        </div>
+    </article>
+</section>

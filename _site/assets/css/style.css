@@ -1,0 +1,1099 @@
+/* ===== 全局样式 ===== */
+*, *::after, *::before {
+  box-sizing: border-box;
+  background-color: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-text: #1a1a1a;
+  --secondary-text: #262626;
+  --accent-color: #1a1a1a;
+  --bg-color: #ffffff;
+  --border-color: #d1d1d1;
+  --hover-color: #333333;
+  --code-bg: #fafafa;
+  --blockquote-bg: #fafafa;
+  --text-color: #1a1a1a;
+  --header-bg: #ffffff; /* Add a background color for the header if needed */
+  --header-border-bottom: 1px solid #e0e0e0; /* Add a border to the bottom of the header */
+}
+
+::selection {
+  background-color: #dadada;
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: #dadada;
+  color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Latin Modern Roman',
+                'Source Han Serif CN', 'Noto Serif CJK SC', serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: var(--primary-text);
+  background-color: var(--bg-color);
+  /* Removed max-width and margin from body, will control content width in main */
+  margin: 0; /* Reset body margin */
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  height: 1px;
+  background: #5e5e5e;
+  border: 0;
+  opacity: 0.5;
+  margin: 1rem 0;
+}
+
+/* ===== 字体定义 ===== */
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: local("Source Han Serif CN"), local("Source Han Serif SC"), local("Source Han Serif TC"),
+        local("Source Han Serif TW"), local("Source Han Serif"), local("Noto Serif CJK SC"),
+        local("Songti SC"), local("SimSong"),
+        url("https://cdn.jsdelivr.net/gh/yihui/cron/fonts/SourceHanSerifCN-Regular-yihui.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kai SC';
+  src: local("Kaiti"), local("Kaiti SC"), local("STKaiti"), local("楷体"), local("SimKai"),
+        local("AR PL KaitiM GB"), local("DFKai-SB"), local("FandolKai"),
+        url("https://cdn.jsdelivr.net/gh/yihui/cron/fonts/gkai00mp-yihui.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ===== 布局组件 ===== */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px; /* Adjust main content width as needed */
+  margin: 1.5rem auto 0 auto;
+  padding: 1rem;
+}
+
+section {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 77%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* ===== 导航栏 ===== */
+header {
+  width: 100%;
+  background-color: var(--header-bg);
+  border-bottom: var(--header-border-bottom);
+  padding: 1.5rem 2rem; /* Adjust padding as needed */
+  display: flex;
+  justify-content: center; /* Center the header content */
+  align-items: center;
+  position: sticky; /* Make header sticky */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Optional: add a subtle shadow */
+}
+
+.header-content {
+    max-width: 1200px; /* Constrain the header content width */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space out title and nav */
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.8rem; /* Adjust font size for your name */
+    font-weight: 600;
+    color: #4dc2bb; /* Color from the image */
+    line-height: 1;
+}
+
+.site-title a {
+    color: inherit; /* Inherit color from site-title */
+    text-decoration: none;
+}
+
+nav ul {
+  border-right: none; /* Remove border from nav ul */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Make nav items horizontal */
+  align-items: center;
+  gap: 2rem; /* Space between nav items */
+}
+
+nav li {
+  margin-bottom: 0; /* Remove bottom margin for horizontal items */
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+nav a.active {
+  color: var(--primary-text);
+  font-weight: 500;
+  border-left: none; /* Remove left border for active state */
+  padding-left: 0;
+  margin-left: 0;
+  /* Add a bottom border for the active state, similar to the image */
+  border-bottom: 2px solid #4dc2bb; /* Color from the image */
+  padding-bottom: 0.25rem;
+}
+
+nav a:hover {
+  color: var(--primary-text);
+  /* Add bottom border on hover as well */
+  border-bottom: 2px solid #4dc2bb;
+  padding-bottom: 0.25rem;
+}
+
+/* Style for the search icon (if using Font Awesome) */
+nav a .fas.fa-search {
+    font-size: 1.1rem;
+    color: var(--secondary-text); /* Adjust icon color */
+}
+
+nav a .fas.fa-search:hover {
+    color: var(--primary-text);
+}
+
+
+/* ===== 文章内容样式 ===== */
+/* ... (Keep existing post, h1, h2, h3, h4 styles) ... */
+.post {
+  margin-bottom: 0rem;
+}
+
+.post-content {
+  margin-bottom: 4rem;
+}
+
+.post p {
+  margin-top: 1rem;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+.post h1, .post h2, .post h3, .post h4,
+.meta, li {
+  margin: 1rem 0;
+}
+
+.post h1, h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-text);
+}
+
+.post h2, h2 {
+  font-size: 1.5rem;
+  margin-top: 1.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--primary-text);
+}
+
+.post h3, h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.post h4, h4 {
+  font-size: 1.15rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+
+/* ===== 代码块样式 ===== */
+pre, code {
+  font-family: Consolas, 'SF Mono', Monaco, 'Lucida Console', 'Courier New', 'Kai SC', monospace;
+  font-size: 0.95em;
+  background: transparent;
+}
+
+pre {
+  margin: 0;
+  padding: 0.5rem;
+  overflow-x: auto;
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--code-bg);
+}
+
+.highlight {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.highlight pre.highlight {
+  margin: 0;
+  padding: 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.copy-code-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-color: var(--accent-color);
+}
+
+/* ===== 引用块样式 ===== */
+blockquote {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Kai SC', serif;
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--accent-color);
+  background-color: var(--blockquote-bg);
+  border-radius: 0 6px 6px 0;
+  font-style: normal;
+  color: var(--secondary-text);
+}
+
+/* ===== 列表样式 ===== */
+.post ol {
+  list-style-type: decimal;
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+}
+
+.post ul, .project ul {
+  list-style-position: inside;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* ===== 响应式设计 ===== */
+@media screen and (max-width: 64rem) {
+  body {
+    margin: 0 auto;
+  }
+
+  header {
+    padding: 1rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .header-content {
+      flex-direction: column; /* Stack title and nav vertically */
+      align-items: center;
+  }
+
+  .site-title {
+      margin-bottom: 1rem; /* Add space below title */
+  }
+
+  header li {
+    display: inline;
+    margin-right: 1rem;
+  }
+
+  .logo {
+    padding-bottom: 1rem;
+  }
+
+  header ul {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
+    flex-wrap: wrap; /* Allow nav items to wrap */
+    justify-content: center; /* Center nav items */
+    gap: 1rem; /* Smaller gap for wrapped items */
+  }
+
+  nav ul {
+    border-right: 0;
+  }
+
+  /* Adjust active and hover states for smaller screens */
+  nav a.active, nav a:hover {
+    border-bottom: 2px solid #4dc2bb;
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    padding-bottom: 0.25rem;
+  }
+}
+
+@media print {
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}
+
+/* ===== 博客页面样式 ===== */
+.blog-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  padding: 0 2rem;
+}
+
+.blog-nav {
+  width: 180px;
+  padding-right: 2.5rem;
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+  border-right: 1px solid var(--border-color);
+}
+
+.blog-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-nav li {
+  margin-bottom: 1.2rem;
+}
+
+.blog-nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.blog-nav a.active {
+  color: var(--primary-text);
+  font-weight: 500;
+  border-left: 2px solid var(--primary-text);
+  padding-left: 12px;
+  margin-left: -14px;
+}
+
+.blog-nav a:hover {
+  color: var(--primary-text);
+}
+
+.blog-posts {
+  flex: 1;
+  padding-left: 2.5rem;
+}
+
+.blog-posts h1 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.post-link h2 {
+  font-size: 1.18rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--primary-text);
+  transition: color 0.2s;
+  flex: 1;
+}
+
+.post-date {
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-left: 1.5rem;
+  white-space: nowrap;
+}
+
+.post-link:hover h2 {
+  color: var(--hover-color);
+}
+
+/* ===== 首页样式 ===== */
+.home-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.profile-image {
+  width: 208px;
+  height: 312px;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.profile-info {
+  margin-top: 1.5rem;
+}
+
+.profile-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background-color: var(--code-bg);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  border: 1px solid var(--border-color);
+}
+
+.home-content > div {
+  margin-bottom: 3rem;
+}
+
+.home-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+  background: var(--code-bg);
+  padding: 1.2rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-color);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.cv-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 0.8rem;
+  transition: background 0.2s;
+}
+
+.cv-link:hover {
+  background: var(--hover-color);
+}
+
+/* ===== 研究项目页面样式 ===== */
+.research-project {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.project-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  letter-spacing: -0.5px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.meta-label {
+  font-weight: 500;
+  color: #444;
+}
+
+.project-description {
+  margin-bottom: 2rem;
+}
+
+.project-abstract h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.abstract-content {
+  background-color: var(--code-bg);
+  border-left: 3px solid var(--accent-color);
+  padding: 1.5rem;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.7;
+}
+
+.project-resources {
+  margin: 2.5rem 0;
+}
+
+.project-resources h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: all 0.2s;
+  border: 1px solid #ddd;
+}
+
+.resource-link:hover {
+  background: #eaeaea;
+  border-color: #ccc;
+}
+
+.project-navigation {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--hover-color);
+  border-color: var(--hover-color);
+  background: #f9f9f9;
+}
+
+/* ===== 研究项目列表样式 ===== */
+.research-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.research-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.research-intro {
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--secondary-text);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.project-title a {
+  color: var(--primary-text);
+  text-decoration: none;
+}
+
+.project-title a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.project-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+}
+
+.project-status {
+  padding: 0.2rem 0.6rem;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.project-description {
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.project-link:hover {
+  background: var(--hover-color);
+}
+
+.site-footer {
+  background-color: #f8f8f8;
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 1.1rem 0.8rem;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  /* Add text-align: center to center block-level children, if any, and for fallback */
+  text-align: center; /* This helps center the footer-content if it's display: block initially or for single line content */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto; /* This already centers the block-level .footer-content itself */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  /* To center the flex items within footer-content when they don't fill the space */
+  justify-content: center; /* This will center the footer-section items */
+  align-items: flex-start; /* Aligns items to the start of the cross axis, typically top. Keep this or change as needed. */
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 180px;
+  margin-bottom: 1rem;
+  /* To center text within each footer-section if it doesn't take full width */
+  text-align: center; /* Keep text left-aligned within each section for readability, as in your image. */
+  /* If you truly want the entire section content including heading and text to center
+     when it's smaller than min-width, you might need to adjust min-width or specific alignment here.
+     For the typical footer layout in your image, left-aligned within a centered block is standard. */
+}
+
+.footer-heading {
+  color: var(--primary-text);
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.footer-text {
+  line-height: 1.2;
+  margin: 0.3rem 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
+
+.footer-bottom {
+  max-width: 1000px;
+  margin: 0.8rem auto 0; /* This centers the .footer-bottom block */
+  padding-top: 0.5rem;
+  border-top: 1px solid #eaeaea;
+  text-align: center; /* This already centers the text content within .footer-bottom */
+  font-size: 0.85rem;
+}
+
+.copyright {
+  margin-bottom: 0.15rem;
+  line-height: 1;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  line-height: 1;
+}
+/* ===== 搜索页面样式 ===== */
+.search-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.search-box {
+  margin: 2rem 0;
+}
+
+#search-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+}
+
+#results-container {
+  margin-top: 1rem;
+}
+
+.search-result {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.search-result h3 {
+  margin-top: 0;
+}
+
+/* ===== 特殊元素样式 ===== */
+.red-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.emphasis-box {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-left: 3px solid #2d2c2c;
+  background-color: var(--code-bg);
+  border-radius: 0 6px 6px 0;
+  color: var(--secondary-text);
+  box-shadow: 0 2px 4px rgba(36, 36, 36, 0.05);
+  line-height: 1.2;
+}
+
+/* ===== 响应式设计优化 ===== */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 auto;
+  }
+  
+  .blog-container {
+    flex-direction: column;
+    padding: 0 1.5rem;
+  }
+  
+  .blog-nav {
+    width: 100%;
+    padding: 0 0 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    top: auto;
+  }
+  
+  .blog-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .blog-nav li {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+  }
+  
+  .blog-nav a.active {
+    border-left: none;
+    border-bottom: 2px solid var(--primary-text);
+    padding-left: 0;
+    padding-bottom: 0.25rem;
+    margin-left: 0;
+  }
+  
+  .blog-posts {
+    padding: 2rem 0 0;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .research-header {
+    margin-bottom: 2rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footer-section {
+    margin-bottom: 1rem;
+  }
+  
+  .home-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-info {
+    margin-top: 1.5rem;
+    margin-left: 0;
+  }
+  
+  .profile-tags {
+    justify-content: center;
+  }
+  
+  .red-dot {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .post-link {
+    position: relative;
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .home-header {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .profile-info {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+  
+  .profile-tags {
+    justify-content: flex-start;
+  }
+}
+
+/* 目录样式 */
+.toc-container {
+    background: var(--code-bg);
+    border-left: 3px solid var(--accent-color);
+    padding: 1.2rem;
+    margin: 2rem 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin: 0.6rem 0;
+    padding-left: 0;
+}
+
+.toc-list a {
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.toc-list a:hover {
+    color: var(--hover-color);
+}
+
+.toc-level-3 {
+    padding-left: 1.2rem;
+}
+
+.toc-level-4 {
+    padding-left: 2.4rem;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.prev-post, .next-post {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    max-width: 45%;
+    transition: all 0.3s ease;
+}
+
+.prev-post {
+    margin-right: auto;
+}
+
+.next-post {
+    margin-left: auto;
+    text-align: right;
+}
+
+.prev-post:hover, .next-post:hover {
+    background-color: #f5f5f5;
+    border-color: var(--hover-color);
+}
+
+.post-comments {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}

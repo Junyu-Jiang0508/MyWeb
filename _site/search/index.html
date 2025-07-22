@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Jekyll v4.4.1" />
+    <meta property="og:title" content="Junyu JIANG&#39;s Personal Website" />
+    <meta name="author" content="Junyu JIANG" />
+    <meta property="og:locale" content="en" />
+    <meta name="description" content="This is Junyu JIANG's personal website 这是蒋竣羽的个人网站" />
+    <meta property="og:description" content="This is Junyu JIANG's personal website 这是蒋竣羽的个人网站" />
+    <link rel="canonical" href="http://0.0.0.0:4000/search/" />
+    <meta property="og:url" content="http://0.0.0.0:4000/search/" />
+    <meta property="og:site_name" content="Junyu JIANG&#39;s Personal Website" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Junyu JIANG&#39;s Personal Website" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "author": {
+                "@type": "Person",
+                "name": "Junyu JIANG",
+                "url": "http://0.0.0.0:4000"
+            },
+            "description": "This is Junyu JIANG's personal website 这是蒋竣羽的个人网站",
+            "headline": "Junyu JIANG&#39;s Personal Website",
+            "url": "http://0.0.0.0:4000/search/"
+        }
+    </script>
+    <title>Junyu JIANG&#39;s Personal Website</title>
+    <link href="/assets/images/icon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Junyu JIANG&#39;s Personal Website">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZJB8RH97S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KZJB8RH97S');
+    </script>
+    <script defer src="/assets/js/analytics.js"></script>
+    <script defer src="/assets/js/copyCode.js"></script>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header aria-hidden="true" class="no-print">
+    <div class="header-content">
+        <div class="site-title">
+            <a href="/">Junyu JIANG</a>
+        </div>
+        <nav role="navigation" aria-hidden="true">
+            <ul>
+                <li>
+                    <a href="/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/research">Research</a>
+                </li>
+
+                <li>
+                    <a href="/blog">Blog</a>
+                </li>
+
+                <li class="active">
+                    <a href="/search">Search</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/search" aria-label="Search"><i class="fas fa-search"></i></a>
+                </li> --> 
+            </ul>
+        </nav>
+    </div>
+</header>
+        
+        <main class="content">
+            <!-- 搜索页面专用样式 -->
+<style>
+    /* 隐藏默认内容容器的部分元素 */
+    .content header,
+    .content > nav:not(.search-nav) {
+        display: none;
+    }
+
+    /* 搜索容器样式 */
+    .search-container {
+        max-width: 800px;
+        margin: 4rem auto;
+        padding: 0 1.5rem;
+    }
+
+    .search-box {
+        margin: 3rem 0;
+    }
+
+    #search-input {
+        width: 100%;
+        padding: 1.2rem 1.5rem;
+        font-size: 1.1rem;
+        border: 2px solid #d1d1d1;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.3s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    #search-input:focus {
+        border-color: #1a1a1a;
+    }
+
+    #results-container {
+        margin-top: 2rem;
+    }
+
+    .search-result {
+        margin: 1.5rem 0;
+        padding: 1.8rem;
+        background: #fff;
+        border: 1px solid #d1d1d1;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease;
+    }
+
+    .search-result:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .search-result h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .search-result p {
+        color: #262626;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+    }
+
+    .search-meta {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .search-meta .date::before {
+        content: "📅 ";
+    }
+
+    .search-meta .category::before {
+        content: "🏷️ ";
+    }
+
+    .no-results {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+        font-style: italic;
+    }
+    
+    /* 简化页脚 */
+    .site-footer .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .connect-section {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .footer-heading {
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+    }
+    
+    .footer-email {
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+<!-- 搜索内容 -->
+<section class="search-container">
+    <h1>Search</h1>
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search posts, research, and more..." aria-label="Search">
+        <div id="results-container"></div>
+    </div>
+</section>
+
+
+<!-- 搜索功能脚本 -->
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+<script>
+    // 确保在文档加载完成后执行
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchJsonUrl = '/search.json';
+        
+        SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: searchJsonUrl,
+            searchResultTemplate: `
+                <article class="search-result">
+                    <h3><a href="{url}">{title}</a></h3>
+                    <p>{excerpt}</p>
+                    <div class="search-meta">
+                        <span class="date">{date}</span>
+                        <span class="category">{category}</span>
+                    </div>
+                </article>
+            `,
+            noResultsText: '<p class="no-results">No results found. Try different keywords.</p>',
+            limit: 10,
+            fuzzy: true,
+            success: function(data) {
+                console.log('Search index loaded successfully', data);
+            },
+            failure: function(err) {
+                console.error('Failed to load search index:', err);
+                document.getElementById('results-container').innerHTML = `
+                    <div class="error-message">
+                        <p>Error loading search index. Please try again later.</p>
+                    </div>
+                `;
+            }
+        });
+        
+        // 自动聚焦到搜索框
+        document.getElementById('search-input').focus();
+    });
+</script>
+        </main>
+        
+        <footer class="site-footer no-print" role="contentinfo">
+    <div class="footer-content">
+        
+        <div class="footer-section">
+            <h3 class="footer-heading">Connect</h3>
+            <ul class="footer-links">
+                <li><a href="mailto:juj013@ucsd.edu" aria-label="Email Junyu">Email: juj013@ucsd.edu</a></li>
+                <li><a href="https://github.com/Junyu-Jiang0508" target="_blank" rel="noopener" aria-label="GitHub Profile">GitHub</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Junyu JIANG. All rights reserved.</p>
+        <p class="disclaimer">Views expressed are my own and do not represent any institution.</p>
+    </div>
+</footer>
+    </div>
+</body>
+</html>

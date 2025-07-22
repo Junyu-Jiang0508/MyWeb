@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta property="og:locale" content="en" />
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:site_name" content="{{ site.title | escape }}" />
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebSite{% endif %}",
+            "author": {
+                "@type": "Person",
+                "name": "{{ site.author | escape }}",
+                "url": "{{ site.url }}"
+            },
+            "description": "{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}",
+            "headline": "{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}",
+            "url": "{{ page.url | absolute_url }}"
+        }
+    </script>
+    <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+    <link href="{{ '/assets/images/icon.png' | relative_url }}" rel="icon" type="image/png">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="alternate" type="application/atom+xml" href="{{ '/atom.xml' | relative_url }}" title="{{ site.title | escape }}">
+    <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZJB8RH97S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KZJB8RH97S');
+    </script>
+    <script defer src="{{ '/assets/js/analytics.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/copyCode.js' | relative_url }}"></script>
+    {% if page.math == true %}
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    {% endif %}
+</head>
+<body>
+    <div class="wrapper">
+        {% include header.html %}
+        
+        <main class="content">
+            {{ content }}
+        </main>
+        
+        {% include footer.html %}
+    </div>
+</body>
+</html>

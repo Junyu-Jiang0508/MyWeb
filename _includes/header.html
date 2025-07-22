@@ -1,0 +1,30 @@
+<header aria-hidden="true" class="no-print">
+    <div class="header-content">
+        <div class="site-title">
+            <a href="{{ '/' | relative_url }}">Junyu JIANG</a>
+        </div>
+        <nav role="navigation" aria-hidden="true">
+            <ul>
+                <li{% if page.url == '/' or page.url == '/index.html' %} class="active"{% endif %}>
+                    <a href="{{ '/' | relative_url }}">About</a>
+                </li>
+                
+                <li{% if page.url contains '/research' or page.url contains '/research_projects' %} class="active"{% endif %}>
+                    <a href="{{ '/research' | relative_url }}">Research</a>
+                </li>
+
+                <li{% if page.url contains '/blog' or page.url contains '/blog/' or page.url contains '/post' %} class="active"{% endif %}>
+                    <a href="{{ '/blog' | relative_url }}">Blog</a>
+                </li>
+
+                <li{% if page.url contains '/search' or page.url contains '/search/' or page.url contains '/search' %} class="active"{% endif %}>
+                    <a href="{{ '/search' | relative_url }}">Search</a>
+                </li>
+
+                <!-- <li>
+                    <a href="{{ '/search' | relative_url }}" aria-label="Search"><i class="fas fa-search"></i></a>
+                </li> --> 
+            </ul>
+        </nav>
+    </div>
+</header>

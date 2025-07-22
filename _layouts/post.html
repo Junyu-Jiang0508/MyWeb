@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+<article class="post" aria-label="Blog Post">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+        
+        <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ page.date | date: "%B %d, %Y" }}
+            </time>
+            
+            {% if page.author %}
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                • By <span itemprop="name">{{ page.author }}</span>
+            </span>
+            {% endif %}
+            
+        </div>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+
+    <nav class="post-navigation" aria-label="Article Navigation">
+        {% if page.previous.url %}
+        <a class="prev-post" href="{{ page.previous.url | relative_url }}" aria-label="Previous Post">
+            ← {{ page.previous.title | truncate: 60 }}
+        </a>
+        {% endif %}
+        
+        {% if page.next.url %}
+        <a class="next-post" href="{{ page.next.url | relative_url }}" aria-label="Next Post">
+            {{ page.next.title | truncate: 60 }} →
+        </a>
+        {% endif %}
+    </nav>
+    
+    <div id="vcomments" class="post-comments" aria-label="Comments Section"></div>
+</article>
+
+<script>
+    mediumZoom('.post-content img.zoomable', {
+        margin: 24,
+        background: 'rgba(0, 0, 0, 0.8)',
+        scrollOffset: 50
+    });
+    
+    new Valine({
+        el: '#vcomments',
+        appId: 'deLvV5QEsweui1qehWIOKa6h-gzGzoHsz',
+        appKey: '5rlOhiv7dVJoeVuohXfQjzpP',
+        avatar: "mp",
+        path: window.location.pathname,
+        visitor: true
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
+        if (headings.length > 0) {
+            const tocContainer = document.createElement('div');
+            tocContainer.className = 'post-toc';
+            tocContainer.innerHTML = '<h3>Table of Contents</h3><ul></ul>';
+            
+            const tocList = tocContainer.querySelector('ul');
+            
+            headings.forEach(heading => {
+                if (!heading.id) {
+                    heading.id = heading.textContent.replace(/\s+/g, '-').toLowerCase();
+                }
+                
+                const level = parseInt(heading.tagName.charAt(1));
+                const li = document.createElement('li');
+                li.style.paddingLeft = (level - 2) * 20 + 'px';
+                li.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
+                
+                tocList.appendChild(li);
+            });
+            
+            document.querySelector('.post-content').insertAdjacentElement('afterbegin', tocContainer);
+        }
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tocContainer = document.querySelector('.toc-container');
+    if (!tocContainer) return;
+    
+    const headings = document.querySelectorAll('h2, h3');
+    if (headings.length < 3) {
+        tocContainer.style.display = 'none';
+        return;
+    }
+    
+    const tocList = document.createElement('ul');
+    tocList.className = 'toc-list';
+    
+    headings.forEach(heading => {
+        if (!heading.id) {
+            heading.id = heading.textContent
+                .replace(/[^\w\s]/g, '')
+                .replace(/\s+/g, '-')
+                .toLowerCase();
+        }
+        
+        const level = heading.tagName.charAt(1);
+        const li = document.createElement('li');
+        li.className = `toc-level-${level}`;
+        li.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
+        tocList.appendChild(li);
+    });
+    
+    tocContainer.appendChild(tocList);
+});
+</script>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- 核心页面 -->
+    <url>
+        <loc>https://junyu-jiang0508.github.io/</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>https://junyu-jiang0508.github.io/about</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+    <url>
+        <loc>https://junyu-jiang0508.github.io/blog</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://junyu-jiang0508.github.io/research</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://junyu-jiang0508.github.io/search</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+    <!-- 博客文章 -->
+    <url>
+        <loc>https://junyu-jiang0508.github.io/blog/2025/06/17/25fall-communication-css-application-experience</loc>
+        <lastmod>2025-06-17</lastmod>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 添加更多博客文章 URL -->
+    
+    <!-- 研究项目 -->
+    <url>
+        <loc>https://junyu-jiang0508.github.io/research/aging-mythological-identities</loc>
+        <lastmod>2024-08-31</lastmod>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://junyu-jiang0508.github.io/research/digitalization-religion</loc>
+        <lastmod>2025-08-01</lastmod>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://junyu-jiang0508.github.io/research/framing-the-nation</loc>
+        <lastmod>2025-07-06</lastmod>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://junyu-jiang0508.github.io/research/gaokao-news-frame</loc>
+        <lastmod>2025-06-01</lastmod>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://junyu-jiang0508.github.io/research/regional-stereotypes</loc>
+        <lastmod>2024-07-06</lastmod>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 静态资源 -->
+    <url>
+        <loc>https://junyu-jiang0508.github.io/assets/pdf/Junyu_Jiang_CV.pdf</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+    <!-- RSS 订阅 -->
+    <url>
+        <loc>https://junyu-jiang0508.github.io/atom.xml</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    
+    <!-- 网站地图 -->
+    <url>
+        <loc>https://junyu-jiang0508.github.io/sitemap.xml</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+</urlset>

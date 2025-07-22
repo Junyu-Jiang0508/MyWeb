@@ -1,0 +1,51 @@
+---
+layout: default
+title: Research Projects
+description: My research in computational social science and political communication
+permalink: /research/
+---
+
+<section class="research-container">
+    <div class="research-header">
+        <h1>Research Projects</h1>
+        <p class="research-intro">
+            My research focuses on the intersection of computational methods and social science, 
+            particularly in political communication, media discourse analysis, and NLP.
+        </p>
+    </div>
+
+    <div class="project-grid">
+        {% assign sorted_projects = site.research_projects | sort: 'date' | reverse %}
+        {% for project in sorted_projects %}
+        <article class="project-card">
+            <div class="project-header">
+                <h2 class="project-title">
+                    <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                </h2>
+                
+                <div class="project-meta">
+                    {% if project.date %}
+                    <time class="project-date">{{ project.date | date: "%B %Y" }}</time>
+                    {% endif %}
+                    
+                    {% if project.status %}
+                    <span class="project-status">{{ project.status }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            
+            {% if project.description %}
+            <p class="project-description">{{ project.description }}</p>
+            {% endif %}
+            
+            <!-- <div class="project-links">
+                {% for link in project.links %}
+                <a href="{{ link.url | relative_url }}" class="project-link" target="_blank">
+                    {{ link.text }}
+                </a>
+                {% endfor %}
+            </div> -->
+        </article>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,36 @@
+title: Junyu JIANG's Personal Website
+description: This is Junyu JIANG's personal website 这是蒋竣羽的个人网站
+author: Junyu JIANG
+email: juj013@ucsd.edu
+url: "https://junyu-jiang0508.github.io" 
+baseurl: ""
+
+permalink: /blog/:year/:month/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules 
+  - vendor 
+  - .idea
+  - .DS_Store
+  - Dockerfile  
+
+theme: minima  
+
+plugins: 
+  - jekyll-feed
+  - jekyll-paginate 
+
+include: 
+  - _includes 
+  - _research_projects 
+
+collections:
+  research_projects:
+    output: true
+    permalink: /research_projects/:name  
+
+markdown: kramdown
+paginate: 5
+paginate_path: /blog/page:num/
