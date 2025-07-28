@@ -1,8 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-07-22T18:57:34+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Junyu JIANG’s Personal Website</title><subtitle>This is Junyu JIANG&apos;s personal website 这是蒋竣羽的个人网站</subtitle><author><name>Junyu JIANG</name></author><entry><title type="html">我的25fall传播学、计算社会科学申请心得</title><link href="http://0.0.0.0:4000/blog/2025/06/25fall-communication-css-application-experience/" rel="alternate" type="text/html" title="我的25fall传播学、计算社会科学申请心得" /><published>2025-06-16T16:00:00+00:00</published><updated>2025-06-16T16:00:00+00:00</updated><id>http://0.0.0.0:4000/blog/2025/06/25fall-communication-css-application-experience</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2025/06/25fall-communication-css-application-experience/"><![CDATA[<section class="post">
-    <h1 class="post-title">我的25fall传播学、计算社会科学申请心得</h1>
-    <p class="post-meta">
-        <time datetime="2025-07-17T00:00:00+00:00">June 17, 2025</time>
-    </p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://junyu-jiang0508.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://junyu-jiang0508.github.io/" rel="alternate" type="text/html" /><updated>2025-07-28T20:05:27+00:00</updated><id>https://junyu-jiang0508.github.io/feed.xml</id><title type="html">Junyu JIANG’s Personal Website</title><subtitle>This is Junyu JIANG&apos;s personal website 这是蒋竣羽的个人网站</subtitle><author><name>Junyu JIANG</name></author><entry><title type="html">Computational Social Science Literature DailyReading Project</title><link href="https://junyu-jiang0508.github.io/blog/2025/07/Computational-Social-Science-Literature-DailyReading/" rel="alternate" type="text/html" title="Computational Social Science Literature DailyReading Project" /><published>2025-07-26T16:00:00+00:00</published><updated>2025-07-26T16:00:00+00:00</updated><id>https://junyu-jiang0508.github.io/blog/2025/07/Computational-Social-Science-Literature-DailyReading</id><content type="html" xml:base="https://junyu-jiang0508.github.io/blog/2025/07/Computational-Social-Science-Literature-DailyReading/"><![CDATA[<h2 id="preface">Preface</h2>
+<p>This project began on July 27, 2025.  As part of my preparation for applying to a <strong>Ph.D. in Computational Social Science (CSS),</strong> I intend to make it a habit to study literature for <strong>one hour each day</strong>.</p>
+
+<p>The idea is to take notes on noteworthy points as I read and see how long I can keep this up.</p>
+
+<p>This idea was inspired by <a href="https://hongtaoh.com/en/apad/">Hongtao Huang’s “A Paper A Day”</a>.</p>
+
+<h2 id="books-reading">Books Reading</h2>
+<h3 id="1-communist-neo-traditionalism-work-and-authority-in-chinese-industry-andrew-g-walder">1. Communist Neo-Traditionalism Work and Authority in Chinese Industry (Andrew G. Walder)</h3>
+<h4 id="july-27-2025">July 27, 2025</h4>
+<ul>
+  <li>Read Chapter: P1-P8.</li>
+  <li>A totalitarian society has two distinguishing characteristics
+    <ol>
+      <li>the nature of the tie between the totalitarian party and its active adherents</li>
+      <li>The second feature is social atomization: “the obliteration of social ties that are not directly harnessed to the party’s aims. Totalitarian societies recognize no legitimate distinction between private and public spheres.</li>
+    </ol>
+  </li>
+  <li>The social atomization only exist in a totalistic society? what about the rise of media and internet platforms?</li>
+  <li>he insisted that the modern socialist society became less enforced. Where the totalitarian image places its emphasis on the disincentives and psychological states created by fear and inbred caution, the neo-traditional image emphasizes the meshing of economic and political power on the structured incentives offered by the party.”</li>
+  <li>how the social structured: The result is a highly institutionalized network of patron-client relations that is maintained by the party and is integral to its rule: a clientelist system in which public loyalty to the party and its ideology is mingled with personal loyalties between party branch officials and their client</li>
+  <li>how it maintained: The neo-traditional image stresses the social network, not the group, as its main structural concept.”</li>
+</ul>
+
+<h4 id="july-28-2025">July 28, 2025</h4>
+<ul>
+  <li>Read Chapter: “Factory as Family”</li>
+  <li></li>
+</ul>
+
+<h3 id="2-political-economy-of-communications-vincent-mosco">2. Political economy of communications (Vincent Mosco)</h3>
+
+<h2 id="paper-reading">Paper Reading</h2>
+<h3 id="2025-7">2025-7</h3>
+<h4 id="2025-7-27">2025-7-27</h4>
+<ul>
+  <li>Nahrgang, M., Weidmann, N. B., Quint, F., Nagel, S., Theocharis, Y., &amp; Roberts, M. E. (2025). Written for Lawyers or Users? Mapping the Complexity of Community Guidelines. Proceedings of the International AAAI Conference on Web and Social Media, 19, 1295–1314. https://ojs.aaai.org/index.php/ICWSM/article/view/35873</li>
+  <li>previous problems: As the harmful content fostered many problems, and the social platform conducted content moderation, many users held low trust towards the restrictions. However,  many actors tried to use the community guidelines to restrict the users, but created a vast difference. No more research has put their attention on users’ situation.</li>
+  <li>research questions: focusing on the length, readability, and semantic complexity of the community guidelines.</li>
+  <li>interesting points:
+    <ol>
+      <li>platform typology : chat platforms; creator platforms; forum platforms;  social network platforms</li>
+      <li>Alt tech platforms:  provide an alternative to Silicon Valley-controlled platforms  like Gab</li>
+      <li>Platform Governance Archive’s (PGA) GitHub Repository makes historical versions available.</li>
+      <li>readablity measurment: Flesch-Kincaid Grade Score relies on the average sentence length and the average word length in a given text</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="2025-8">2025-8</h3>
+<ul>
+  <li></li>
+</ul>]]></content><author><name>Junyu JIANG</name></author><summary type="html"><![CDATA[Preface This project began on July 27, 2025. As part of my preparation for applying to a Ph.D. in Computational Social Science (CSS), I intend to make it a habit to study literature for one hour each day. The idea is to take notes on noteworthy points as I read and see how long I can keep this up. This idea was inspired by Hongtao Huang’s “A Paper A Day”. Books Reading 1. Communist Neo-Traditionalism Work and Authority in Chinese Industry (Andrew G. Walder) July 27, 2025 Read Chapter: P1-P8. A totalitarian society has two distinguishing characteristics the nature of the tie between the totalitarian party and its active adherents The second feature is social atomization: “the obliteration of social ties that are not directly harnessed to the party’s aims. Totalitarian societies recognize no legitimate distinction between private and public spheres. The social atomization only exist in a totalistic society? what about the rise of media and internet platforms? he insisted that the modern socialist society became less enforced. Where the totalitarian image places its emphasis on the disincentives and psychological states created by fear and inbred caution, the neo-traditional image emphasizes the meshing of economic and political power on the structured incentives offered by the party.” how the social structured: The result is a highly institutionalized network of patron-client relations that is maintained by the party and is integral to its rule: a clientelist system in which public loyalty to the party and its ideology is mingled with personal loyalties between party branch officials and their client how it maintained: The neo-traditional image stresses the social network, not the group, as its main structural concept.” July 28, 2025 Read Chapter: “Factory as Family” 2. Political economy of communications (Vincent Mosco) Paper Reading 2025-7 2025-7-27 Nahrgang, M., Weidmann, N. B., Quint, F., Nagel, S., Theocharis, Y., &amp; Roberts, M. E. (2025). Written for Lawyers or Users? Mapping the Complexity of Community Guidelines. Proceedings of the International AAAI Conference on Web and Social Media, 19, 1295–1314. https://ojs.aaai.org/index.php/ICWSM/article/view/35873 previous problems: As the harmful content fostered many problems, and the social platform conducted content moderation, many users held low trust towards the restrictions. However,  many actors tried to use the community guidelines to restrict the users, but created a vast difference. No more research has put their attention on users’ situation. research questions: focusing on the length, readability, and semantic complexity of the community guidelines. interesting points: platform typology : chat platforms; creator platforms; forum platforms;  social network platforms Alt tech platforms:  provide an alternative to Silicon Valley-controlled platforms  like Gab Platform Governance Archive’s (PGA) GitHub Repository makes historical versions available. readablity measurment: Flesch-Kincaid Grade Score relies on the average sentence length and the average word length in a given text 2025-8]]></summary></entry><entry><title type="html">我的25fall传播学、计算社会科学申请心得</title><link href="https://junyu-jiang0508.github.io/blog/2025/06/25fall-communication-css-application-experience/" rel="alternate" type="text/html" title="我的25fall传播学、计算社会科学申请心得" /><published>2025-06-16T16:00:00+00:00</published><updated>2025-06-16T16:00:00+00:00</updated><id>https://junyu-jiang0508.github.io/blog/2025/06/25fall-communication-css-application-experience</id><content type="html" xml:base="https://junyu-jiang0508.github.io/blog/2025/06/25fall-communication-css-application-experience/"><![CDATA[<section class="post">
     
     <div class="toc-container">
         <h3>文章目录</h3>
@@ -36,4 +84,4 @@
     
     <!-- 文章内容保持不变 -->
     
-</section>]]></content><author><name>Junyu JIANG</name></author><summary type="html"><![CDATA[我的25fall传播学、计算社会科学申请心得 June 17, 2025 文章目录 前言 一、背景、申请项目与录取结果 1. 我的背景 2. 申请结果 关于中介 二、申请之前的选校 1. 一些选校的小建议 2. 美国Political Science硕士项目 3. 美国Media and Communication硕士项目 4. 美国Computational Social Science硕士项目 三、申请要素：GPA、语言、GRE、CV、SoP、PHS、WS、RL等 1. 硬实力 2. 软实力 3. 对各部分的一些小建议 四、一些对我有帮助的资源]]></summary></entry></feed>
+</section>]]></content><author><name>Junyu JIANG</name></author><summary type="html"><![CDATA[文章目录 前言 一、背景、申请项目与录取结果 1. 我的背景 2. 申请结果 关于中介 二、申请之前的选校 1. 一些选校的小建议 2. 美国Political Science硕士项目 3. 美国Media and Communication硕士项目 4. 美国Computational Social Science硕士项目 三、申请要素：GPA、语言、GRE、CV、SoP、PHS、WS、RL等 1. 硬实力 2. 软实力 3. 对各部分的一些小建议 四、一些对我有帮助的资源]]></summary></entry></feed>

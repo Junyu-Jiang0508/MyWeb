@@ -20,6 +20,8 @@ layout: default
         </div>
     </header>
 
+    <div class="toc-container"></div> 
+
     <div class="post-content" itemprop="articleBody">
         {{ content }}
     </div>
@@ -42,12 +44,14 @@ layout: default
 </article>
 
 <script>
+    // mediumZoom (如果你不需要图片放大功能，可以删除这部分)
     mediumZoom('.post-content img.zoomable', {
         margin: 24,
         background: 'rgba(0, 0, 0, 0.8)',
         scrollOffset: 50
     });
     
+    // Valine 评论系统 (如果你不需要评论功能，可以删除这部分)
     new Valine({
         el: '#vcomments',
         appId: 'deLvV5QEsweui1qehWIOKa6h-gzGzoHsz',
@@ -59,39 +63,17 @@ layout: default
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
-        if (headings.length > 0) {
-            const tocContainer = document.createElement('div');
-            tocContainer.className = 'post-toc';
-            tocContainer.innerHTML = '<h3>Table of Contents</h3><ul></ul>';
-            
-            const tocList = tocContainer.querySelector('ul');
-            
-            headings.forEach(heading => {
-                if (!heading.id) {
-                    heading.id = heading.textContent.replace(/\s+/g, '-').toLowerCase();
-                }
-                
-                const level = parseInt(heading.tagName.charAt(1));
-                const li = document.createElement('li');
-                li.style.paddingLeft = (level - 2) * 20 + 'px';
-                li.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
-                
-                tocList.appendChild(li);
-            });
-            
-            document.querySelector('.post-content').insertAdjacentElement('afterbegin', tocContainer);
-        }
-    });
-</script>
-<script>
+// !!! 动态生成目录的 JavaScript 代码，保持不变 !!!
 document.addEventListener('DOMContentLoaded', function() {
     const tocContainer = document.querySelector('.toc-container');
-    if (!tocContainer) return;
+    if (!tocContainer) return; // 如果找不到 .toc-container，则不执行后续操作
     
-    const headings = document.querySelectorAll('h2, h3');
-    if (headings.length < 3) {
+    // 获取所有 h2 和 h3 标题
+    const headings = document.querySelectorAll('.post-content h2, .post-content h3'); 
+    // 注意：这里我将选择器改为 '.post-content h2, .post-content h3'
+    // 以确保只从文章内容中提取标题，而不是其他地方。
+    
+    if (headings.length < 3) { // 少于3个标题则不显示目录
         tocContainer.style.display = 'none';
         return;
     }
@@ -100,20 +82,21 @@ document.addEventListener('DOMContentLoaded', function() {
     tocList.className = 'toc-list';
     
     headings.forEach(heading => {
+        // 如果标题没有 id，则根据其文本内容生成一个
         if (!heading.id) {
             heading.id = heading.textContent
-                .replace(/[^\w\s]/g, '')
-                .replace(/\s+/g, '-')
-                .toLowerCase();
+                .replace(/[^\w\s]/g, '') // 移除特殊字符
+                .replace(/\s+/g, '-')   // 将空格替换为连字符
+                .toLowerCase();         // 转换为小写
         }
         
-        const level = heading.tagName.charAt(1);
+        const level = heading.tagName.charAt(1); // 获取标题级别 (例如 'H2' -> 2)
         const li = document.createElement('li');
-        li.className = `toc-level-${level}`;
-        li.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
+        li.className = `toc-level-${level}`; // 添加表示标题级别的类名 (例如 'toc-level-2')
+        li.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`; // 创建链接
         tocList.appendChild(li);
     });
     
-    tocContainer.appendChild(tocList);
+    tocContainer.appendChild(tocList); // 将生成的目录列表添加到容器中
 });
 </script>

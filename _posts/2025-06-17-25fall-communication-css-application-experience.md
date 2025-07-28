@@ -5,10 +5,6 @@ date: 2025-06-17 00:00:00 +0800
 ---
 
 <section class="post">
-    <h1 class="post-title">我的25fall传播学、计算社会科学申请心得</h1>
-    <p class="post-meta">
-        <time datetime="2025-07-17T00:00:00+00:00">June 17, 2025</time>
-    </p>
     
     <div class="toc-container">
         <h3>文章目录</h3>
