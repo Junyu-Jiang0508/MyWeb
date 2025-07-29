@@ -29,7 +29,13 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 - 
 
 ### 2. Political economy of communications (Vincent Mosco)
-
+#### July 28, 2025
+- Read Chapter: 30-47.
+- 传播政治经济学的基本政治图谱：商品化 空间化 结构化
+- 受众商品论：劳工为了回报他们所接受的媒介内容而出卖了他们的劳动力（注意力）;延伸了劳动的外延，扩展了传统的商品逻辑，也许可作为资本注主义的劳动转型过程
+- 劳动（braverman，1974）：概念的统一体：想象于创意能力，设计与执行能力；在商品化过程中，资本的作用是把创意和制作相分离，把技术和执行任务的非娴熟相分离，形成一个管理阶层，同时生产上的新的技能与权力的配置相结合来重构劳动过程
+- 商品化到空间化：信息系统的 出现使得信息转变空间——重新分配产业资源
+- 传播政治经济学的传统是把空间化视作企业权力在传播产业的制度延伸
 
 ## Paper Reading
 ### 2025-7
@@ -42,6 +48,8 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
     2. Alt tech platforms:  provide an alternative to Silicon Valley-controlled platforms  like Gab
     3. Platform Governance Archive’s (PGA) GitHub Repository makes historical versions available.
     4. readablity measurment: Flesch-Kincaid Grade Score relies on the average sentence length and the average word length in a given text
+
+
 
 ### 2025-8
 - 
