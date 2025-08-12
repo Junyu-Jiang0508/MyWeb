@@ -74,6 +74,23 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
      3. 倾向于将市场视为个人互动的自然产物，加剧了社会的阶级、种族和性别分别
      4. 急切的需要把经济学正统从修辞体系中脱离出来，研究其作为一种权力体系的部分
 
+### 3. Rise of the Red Engineers: The Cultural Revolution and the Origins of China's New Class (Joel Andreas)
+
+#### August 11, 2025
+- **Read Chapter:** P213 Chapter Nine - Rebuilding the Foundation of Political and Cultural Power
+- **Main Content:** Mainly talks about the rise of the red engineers and the revocation of the educational systems after the Cultural Revolution
+
+- **Key Insights:**
+  1. **Worker-Peasant-Soldier Students' Attitude:** They considered the loss of collective consciousness in the new college student as an indicator of the reduction of political rights and participation in the New Era. This phenomenon illustrates that there exists a huge generation gap; the traditional habitus didn't exist, like the alternation of the ideology with the huge impact of their individual self-consciousness.
+  
+  2. **Middle School Changes:** The rebirth of the keypoints classes. This showed that the brand-new hierarchy of the educational systems comes out, which produces the education elite.
+  
+  3. **Party Membership Transformation:** Shorn of its ideological meaning, party membership retained its instrumental value as a political credential and networking tool, attracting ambitious university students who aspired to public service and leadership positions.
+  
+  4. **Loss of Inspirational Core:** The loss of the inspirational core of the communist party member put it more like a political credential and networking tool.
+  
+  5. **Core of New Tsinghua University:** The transfer of class power, the flow and change of the knowledge hierarchy
+
 ## Paper Reading
 
 ### 2025-7
@@ -113,5 +130,17 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
      3. Using human annotators to label pairs identified as positive cases
 
 - **Questions:** How to deal with LLMs bias?
+
+#### 2025-8-11
+- **Paper:** Waight, H., Messing, S., Shirikov, A., Roberts, M. E., Nagler, J., Greenfield, J., Brown, M. A., Aslett, K., & Tucker, J. A. (2025). Quantifying Narrative Similarity Across Languages. *Sociological Methods & Research, 54(3)*, 933–983. [Link](https://doi.org/10.1177/00491241251340080) (Continued)
+
+- **Language Standardization Process:**
+  1. **Standardized Prompt:** "Please summarize this news article in 7-10 English sentences. Article: [insert article text]"
+  2. **Claims Extraction:** Prompt GPT-4o to extract the "descriptive, normative, causal, and classificatory claims" (the "claims") and "people, places, things, and events" (the "subjects") included in each summary
+  3. **Bias Mitigation:** How to deal with the bias of the LLMs
+
+- **Two-Step Candidate Generation Process:**
+  1. **Bi-encoder to Cross-encoder:** Using the cutoff to delete
+  2. **Efficient Pairwise Comparison:** Reducing computational complexity through hierarchical filtering
 
 *[To be continued...]*
