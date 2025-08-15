@@ -74,6 +74,35 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
      3. 倾向于将市场视为个人互动的自然产物，加剧了社会的阶级、种族和性别分别
      4. 急切的需要把经济学正统从修辞体系中脱离出来，研究其作为一种权力体系的部分
 
+#### August 11, 2025
+- **Read Chapter:** 86-95
+- **Key Points:**
+  1. **如何定义传播:**
+     - 会话的修辞如同调查的逻辑一样应该提供科学的标准，尤其是，这种观点坚持认为理解不是一个人使用解释实在的语言去解释显示并对现实做观察和报告的过程，相反，理解发生于两个或者更多的人交换观察结果、观念以及用并不只是揭示显示、而是有益于建构显示的语言来表达观察结果与观念时。
+     - **两种定义方式:** 信息传输与意义的建构
+     - **数学基础的传播科学:** 香农韦佛，传播者与编码者的信息传送于解码者
+     - **社会学家:** 建立意义的过程
+     - **市场专家:** 两个或多方的交互过程，意义通过符号有意图的使用交换
+     - **政治经济学启示:** 传播学应把传播体系看作社会基本经济、政治、文化过程的一部分：资本主义基本要素框架，资本积累与劳动工资
+
+#### August 14, 2025
+- **Read Chapter:** 96-110
+- **Key Points:**
+  1. **影响传播政治经济学的社会和知识因素:**
+     - **社会驱动力:**
+       1. 媒介沿着工业路线被组织并且大多数媒介劳动为薪水工作；但媒介聚集现在如此有力以至于无须保留完全所有权的风险就可以控制积累循环，弹性积累巩固了全球的媒介权力
+       2. 但政治经济学对于探讨围绕家庭组织起来的行为是穷于应付的，同样谈论受众所使用的一种新语言也挑战了政治经济学，受众通过收听、阅读、观赏外加购买媒介内容来参与积累过程
+       3. **跨国化的过程:** 也是世界信息传播新秩序的诉求，而全球化则频繁而含糊的指向跨国化：
+          - eg：不结盟运动——国家自决——传播媒介的普遍获得、对传播的生产和分配过程予以控制以及传播时基本人权——讨论全球资本主义在美国为首的战后重组中传播的角色——传播与文化在对先前对立的国家的重新支配中如何牵连
+          - 新技术扩大受众的控制，国家主权的破坏——嵌入式的假想美国式形象——图汇跨国传播公司的增长和权力以及他们和美国亲近的联动装置
+          - 信息与传播技术具有重新整合全球劳工分工的力量
+       4. **信息社会的出现:**
+          - 时间，空间和社会关系的彻底断流
+          - 丹席勒，数字资本主义
+          - 开放源和黑客网络挑战了所有权：矛盾出现：信息免费使用的渴望和资本主义希望信息达到创造剩余价值的单一目的
+     - **知识潮流:**
+       1. 传播产业与传统古典经济模型格格不入
+
 ### 3. Rise of the Red Engineers: The Cultural Revolution and the Origins of China's New Class (Joel Andreas)
 
 #### August 11, 2025
@@ -91,6 +120,30 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
   
   5. **Core of New Tsinghua University:** The transfer of class power, the flow and change of the knowledge hierarchy
 
+### 4. Representation: Cultural Representations and Signifying Practices (Stuart Hall, Ed.)
+
+#### August 14, 2025
+- **Read Chapter:** P225-235 Chapter Four - The Spectacle of The Other
+
+- **Key Insights:**  
+  1. **Two Guiding Questions:** 
+     a. Have the repertoires of representation around "difference" and "otherness" changed, or do earlier traces from colonial and racialized narratives remain embedded in contemporary culture?
+     b. Is there a possibility for an effective politics of presentation that can challenge and transform dominant stereotypical portrayals?
+
+  2. **Persistence of Difference and Power:**
+     - Hall notes that even with new modes of visual and cultural production, many symbolic codes, visual motifs, and narrative frames of the "racialized Other" still echo colonial-era patterns
+     - Old and new forms often overlap: modern advertising, film, and journalism may adopt new aesthetics, yet still rely on deep-seated binaries (civilized/primitive, modern/backward, white/non-white)
+
+  3. **Representation as a Site of Power Struggle:**
+     - The "spectacle of the Other" emphasizes that seeing and being seen are part of a broader power relation
+     - Mainstream media and cultural industries do not merely "depict" the Other; they define the Other—this power to represent is central to cultural hegemony
+     - Representation is not a one-way process; it is constantly negotiated among producers, texts, and audiences, though dominant discourses generally prevail
+
+  4. **Counter-Representation Strategies:**
+     - **Reversing the stereotype:** Flipping a negative stereotype into its opposite, re-signifying it in a positive or empowering way
+     - **Positive imagery:** Presenting affirmative, authentic, and diverse representations to offset prevailing negative portrayals
+     - **Contesting from within:** Working within mainstream forms and platforms to insert new narratives that disrupt established codes
+     - Hall warns that each approach has limits—reversal can still lock thinking into binary oppositions, while positive imagery may gloss over structural inequalities 
 ## Paper Reading
 
 ### 2025-7
