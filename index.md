@@ -33,8 +33,8 @@ description: "Junyu JIANG's personal website. 这是蒋竣羽的个人网站"
             <h2>Curriculum Vitae</h2>
             <p>
                 Download my full academic CV: 
-                <a href="/assets/pdf/Junyu_Jiang_CV.pdf" class="cv-link" target="_blank">
-                    Junyu_Jiang_CV.pdf
+                <a href="/assets/pdf/CV.pdf" class="cv-link" target="_blank">
+                    CV.pdf
                 </a>
             </p>
         </div>
