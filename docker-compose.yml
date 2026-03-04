@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  site:
+    build: .
+    image: my-jekyll-site
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "4000:4000"
+    command: bundle exec jekyll serve --watch --host 0.0.0.0 --config _config.yml,_config.dev.yml

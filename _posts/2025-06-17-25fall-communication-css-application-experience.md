@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: "我的25fall传播学、计算社会科学申请心得" 
+title: "我的26fall Communication/Political Science 申请总结" 
 date: 2025-06-17 00:00:00 +0800 
 ---
 
