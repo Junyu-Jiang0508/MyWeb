@@ -4,32 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
-    <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
-    <meta name="author" content="{{ site.author }}" />
-    <meta property="og:locale" content="en" />
-    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}" />
-    <link rel="canonical" href="{{ page.url | absolute_url }}" />
-    <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <meta property="og:site_name" content="{{ site.title | escape }}" />
-    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebSite{% endif %}",
-            "author": {
-                "@type": "Person",
-                "name": "{{ site.author | escape }}",
-                "url": "{{ site.url }}"
-            },
-            "description": "{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}",
-            "headline": "{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}",
-            "url": "{{ page.url | absolute_url }}"
-        }
-    </script>
-    <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+    {% seo %}
     <link href="{{ '/assets/images/icon.png' | relative_url }}" rel="icon" type="image/png">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="alternate" type="application/atom+xml" href="{{ '/atom.xml' | relative_url }}" title="{{ site.title | escape }}">

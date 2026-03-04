@@ -1,7 +1,7 @@
 title: Junyu JIANG's Personal Website
 description: This is Junyu JIANG's personal website 这是蒋竣羽的个人网站
 author: Junyu JIANG
-email: juj013@ucsd.edu
+email: juj013[at]ucsd[dot]edu
 url: "https://junyu-jiang0508.github.io" 
 baseurl: ""
 
@@ -21,6 +21,8 @@ theme: minima
 plugins: 
   - jekyll-feed
   - jekyll-paginate 
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 include: 
   - _includes 
